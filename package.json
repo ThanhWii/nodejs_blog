@@ -2,9 +2,10 @@
   "name": "blog",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "start": "node --watch --inspect index.js",
+    "start": "node --watch --inspect src/index.js",
+    "watch": "sass --embed-source-map --watch ./src/resources/scss:./src/public/css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,9 +24,11 @@
   },
   "homepage": "https://github.com/ThanhWii/nodejs_blog#readme",
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "express-handlebars": "^8.0.1"
   },
   "devDependencies": {
-    "nodemon": "^3.1.4"
+    "morgan": "^1.10.0",
+    "sass": "^1.77.8"
   }
 }
